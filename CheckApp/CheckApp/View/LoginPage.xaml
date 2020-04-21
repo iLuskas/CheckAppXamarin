@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CheckApp.View.LoginPage"
+             Title="Check App">
+    <ContentPage.Resources>
+        <StyleSheet Source="/Estilo/Estilo.css" />
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+
+        <ScrollView>
+            <StackLayout Orientation="Vertical"
+                     Margin="20"
+                     VerticalOptions="Center">
+                <StackLayout Orientation="Vertical"
+                             BackgroundColor="#306790"
+                             Padding="5">
+                    <Label Text="CHECKAPP"
+                       FontSize="Title"
+                       VerticalOptions="Center"
+                       HorizontalOptions="CenterAndExpand"
+                       StyleClass="lblNomeLogo"/>
+                </StackLayout>
+                <StackLayout Orientation="Vertical">
+                    <Image Source="Logo"
+                       Margin="10"
+                       ></Image>
+                    <Label Text="Login"
+                       FontSize="Title"
+                       VerticalOptions="CenterAndExpand"
+                       HorizontalOptions="CenterAndExpand"
+                       StyleClass="lblTitulo"
+                       />
+                </StackLayout>
+                <Entry x:Name="txtLogin" 
+                   Placeholder="Informe o email" 
+                   TextColor="Black"></Entry>
+
+                <Entry x:Name="txtSenha" 
+                   Placeholder="Informe sua senha" 
+                   TextColor="Black" 
+                   IsPassword="True"></Entry>
+
+                <StackLayout Orientation="Horizontal"
+                         Padding="5">
+                    <Label
+                   Text="Lembrar-me" 
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"/>
+                    <Switch
+                    HorizontalOptions="End"></Switch>
+
+                </StackLayout>
+
+                <Button x:Name="btnLogin"                   
+                    Text="Logar"                   
+                    BorderRadius="10"
+                    TextColor="WhiteSmoke"
+                    StyleClass="btnLogar"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿/*ViewmPage Login*/
+
+.lblTitulo {
+    color: #306790;
+}
+
+.btnLogar 
+{
+    background-color: #306790;
+}
+
+.headerMenu 
+{
+    background-color: #306790;
+}
+
+.lblNomeLogo {
+    color: white;
+}
+/*ViewmPage Login*/
+
+/*ViewmPage Empresa*/
+.MenuCrud
+{
+    color: #306790;
+    font-weight: 900;
+}

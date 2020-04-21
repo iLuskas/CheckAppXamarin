@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CheckApp.View.EquipamentoPage"
+             Title="Menu - Equipamentos">
+    <ContentPage.Content>
+        <AbsoluteLayout VerticalOptions="FillAndExpand">
+            <Grid AbsoluteLayout.LayoutFlags="PositionProportional" 
+              AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+              Margin="0,0,10,100">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout x:Name="FloatMenuItem1" 
+                         Orientation="Horizontal" 
+                         IsVisible="False" 
+                         Grid.Row="0"
+                         StyleClass="MenuCrud">
+                    <Label Text="Adicionar" VerticalTextAlignment="Center"/>
+                    <Image Source="adicionar"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Aspect="AspectFill"></Image>
+
+                </StackLayout>
+                <StackLayout x:Name="FloatMenuItem2" 
+                         Orientation="Horizontal" 
+                         IsVisible="False" 
+                         Grid.Row="1">
+                    <Label Text="Alterar" 
+                       VerticalTextAlignment="Center"
+                       Margin="7"/>
+                    <Image Source="lapis"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Aspect="AspectFill"
+                       ></Image>
+
+                </StackLayout>
+                <StackLayout x:Name="FloatMenuItem3" 
+                         Orientation="Horizontal" 
+                         IsVisible="False" 
+                         Grid.Row="2">
+                    <Label Text="Remover" 
+                       VerticalTextAlignment="Center"
+                       Margin="1.6"/>
+                    <Image Source="sair"
+                       AbsoluteLayout.LayoutFlags="PositionProportional"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Aspect="AspectFill"></Image>
+                </StackLayout>
+            </Grid>
+
+            <ListView x:Name="ListaViewEmpresas" Margin="25">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="TESTE"></TextCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Image x:Name="imgAdd"
+               Source="adicionar"
+               AbsoluteLayout.LayoutFlags="PositionProportional"
+               AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1"
+               Margin="10,10,10,30"
+               WidthRequest="55"
+               HeightRequest="55"
+               VerticalOptions="End"
+               HorizontalOptions="End"
+               Aspect="AspectFill"
+            >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnImgAddClicked1"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
